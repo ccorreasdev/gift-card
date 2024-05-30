@@ -51,7 +51,7 @@ html {
   background-color: #0e192d;
   padding: 2.5rem;
   border-radius: 20px;
-  transition: all 800ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .card--active {
