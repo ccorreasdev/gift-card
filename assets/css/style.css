@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "NouvelR";
+  src: url("../fonts/NouvelR-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Hand";
+  src: url("../fonts/Hand/Gochi_Hand/GochiHand-Regular.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.layout {
+  font-family: "Hand", "NouvelR";
+  width: 100%;
+  height: 100vh;
+  background-color: #665a51;
+  color: #cccccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  background-color: #0e192d;
+  padding: 2.5rem;
+  border-radius: 20px;
+  transition: all 800ms ease-in-out;
+  z-index: 99;
+  transform-style: preserve-3d;
+}
+
+.card2 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  background-color: #0e192d;
+  padding: 2.5rem;
+  border-radius: 20px;
+  transition: all 800ms ease-in-out;
+}
+
+.card--active {
+  transform: rotateY(180deg) translateX(200px);
+}
+
+.card2--active {
+  transform: translateX(200px);
+}
+
+.card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #68584d;
+  background: linear-gradient(0deg, #736963, #605146);
+  font-size: 8rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-shadow: 2px 2px 0px white, -2px -2px 0px white, -2px 2px 0px white,
+    4px 2px 0px white;
+}
+
+.heart1 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(10px);
+  transform: rotate(30deg);
+}
+
+.heart2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(10px);
+  transform: rotate(-20deg);
+}
+
+.newspaper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+
+.newspaper2 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+
+.heart__img {
+  width: 100%;
+  height: 100%;
+}
+
+.open {
+  font-size: 4rem;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: #0e192d;
+  cursor: pointer;
+  animation: btnWait 2s linear infinite alternate;
+}
+
+@keyframes btnWait {
+  0% {
+    background-color: #0e192d;
+  }
+  100% {
+    background-color: #1f1f30;
+  }
+}
+
+.card__text {
+  font-size: 4rem;
+}
